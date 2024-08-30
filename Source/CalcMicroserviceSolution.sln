@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcMicroservice", "GettingStarted\CalcMicroservice.csproj", "{9CF94616-6CD1-41E1-9666-E3CE592F9D88}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaParser", "FormulaParser\FormulaParser.csproj", "{B5135C44-D350-40B2-A6AF-51E9BACF345E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaParserTests", "FormulaParserTests\FormulaParserTests.csproj", "{99C4880F-48BD-43FC-AFE3-78D1C11862E7}"
@@ -24,7 +22,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogWriter", "LogWriter\LogWriter.csproj", "{7D9A230A-D545-44B1-B141-76921735AFCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogWriter", "LogWriter\LogWriter.csproj", "{7D9A230A-D545-44B1-B141-76921735AFCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcMicroservice", "CalcMicroservice\CalcMicroservice.csproj", "{E0E11DE2-D635-49C5-B3CF-E97642F8F458}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,18 +36,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Debug|x64.Build.0 = Debug|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Debug|x86.Build.0 = Debug|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Release|x64.ActiveCfg = Release|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Release|x64.Build.0 = Release|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Release|x86.ActiveCfg = Release|Any CPU
-		{9CF94616-6CD1-41E1-9666-E3CE592F9D88}.Release|x86.Build.0 = Release|Any CPU
 		{B5135C44-D350-40B2-A6AF-51E9BACF345E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B5135C44-D350-40B2-A6AF-51E9BACF345E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5135C44-D350-40B2-A6AF-51E9BACF345E}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -132,6 +120,18 @@ Global
 		{7D9A230A-D545-44B1-B141-76921735AFCC}.Release|x64.Build.0 = Release|Any CPU
 		{7D9A230A-D545-44B1-B141-76921735AFCC}.Release|x86.ActiveCfg = Release|Any CPU
 		{7D9A230A-D545-44B1-B141-76921735AFCC}.Release|x86.Build.0 = Release|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Debug|x64.Build.0 = Debug|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Debug|x86.Build.0 = Debug|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Release|x64.Build.0 = Release|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Release|x86.ActiveCfg = Release|Any CPU
+		{E0E11DE2-D635-49C5-B3CF-E97642F8F458}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

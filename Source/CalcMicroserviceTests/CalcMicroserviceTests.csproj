@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GettingStarted\CalcMicroservice.csproj" />
+    <ProjectReference Include="..\CalcMicroservice\CalcMicroservice.csproj" />
   </ItemGroup>
 
   <ItemGroup>
