@@ -1,0 +1,15 @@
+*.suo
+*.user
+bin
+obj
+
+.DS_Store
+*.DotSettings
+
+ReadMe.txt
+calc.bat
+main.bat
+
+**/.vs
+**/.vscode
+**/.idea
