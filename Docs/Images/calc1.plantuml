@@ -1,0 +1,62 @@
+@startuml
+
+    queue "expression_queue"
+    queue "calc_queue"
+    queue "answer_queue"
+    queue "add_queue"
+    queue "mult_queue"
+    queue "div_queue"
+    queue "minus_queue"
+    queue "abs_queue"
+    queue "                                                                     result_queue                                                         " as result_queue
+    queue avg_queue
+
+
+    actor Client
+    component Parser
+    component Calc
+    component OperAdd
+    component OperMinus
+    component OperMult
+    component OperDiv
+    component OperAvg
+    component OperAbs
+    
+
+Client -left-> expression_queue: (1+2)*3
+Client <.. answer_queue: " 9"
+
+Parser <.up. "expression_queue": "  (1+2)*3" 
+Parser -down-> "calc_queue" : "  mult(add(1, 2), 3)" 
+Parser -right-> "answer_queue": syntax\nerror
+
+Calc <.up. "calc_queue" : mult(add(1, 2), 3) 
+
+Calc -down-> "add_queue" : add(1,2)
+Calc -down-> "mult_queue" : mult(3,3)
+Calc -down-> "div_queue"
+Calc -down-> "minus_queue"
+Calc -down-> "avg_queue"
+Calc -down-> "abs_queue"
+Calc -up-> "answer_queue" : " 9"
+Calc <.... "result_queue"
+
+OperAdd <.up. "add_queue" : add(1,2)
+OperAdd -down-> "result_queue" : 6
+
+OperMult <.up. "mult_queue" : add(3,3)
+OperMult -down-> "result_queue" : 9
+
+OperDiv <.up. "div_queue"
+OperDiv -down-> "result_queue"
+
+OperMinus <.up. "minus_queue"
+OperMinus -down-> "result_queue"
+
+OperAvg <.up. "avg_queue"
+OperAvg -down-> "result_queue"
+
+OperAbs <.up. "abs_queue"
+OperAbs -down-> "result_queue"
+
+@enduml

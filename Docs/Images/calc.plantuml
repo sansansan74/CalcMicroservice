@@ -1,0 +1,56 @@
+@startuml
+
+    queue "expression_queue"
+    queue "calc_queue"
+    queue "answer_queue"
+    queue "add_queue"
+    queue "mult_queue"
+    queue "div_queue"
+    queue "minus_queue"
+    queue "result_queue"
+    queue avg_queue
+
+
+
+    component Parser
+    component Calc
+    component OperAdd
+    component OperMinus
+    component OperMult
+    component OperDiv
+    component OperAvg
+    component Client
+
+Client -up-> expression_queue: write
+Client <-- answer_queue: read
+
+Parser -up-> "expression_queue" : read
+Parser -down-> "calc_queue" : write
+Parser -right-> "answer_queue" : write
+
+Calc -up-> "calc_queue" : read
+
+Calc -down-> "add_queue" : write
+Calc -down-> "mult_queue" : write
+Calc -down-> "div_queue" : write
+Calc -down-> "minus_queue" : write
+Calc -down-> "avg_queue" : write
+Calc -up-> "answer_queue" : write
+Calc <----- "result_queue" : read
+
+OperAdd -up-> "add_queue" : read
+OperAdd -down-> "result_queue" : write
+
+OperMult -up-> "mult_queue" : read
+OperMult -down-> "result_queue" : write
+
+OperDiv -up-> "div_queue" : read
+OperDiv -down-> "result_queue" : write
+
+OperMinus -up-> "minus_queue" : read
+OperMinus -down-> "result_queue" : write
+
+OperAvg -up-> "avg_queue" : read
+OperAvg -down-> "result_queue" : write
+
+@enduml

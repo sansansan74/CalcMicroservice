@@ -3,6 +3,8 @@
 bin
 obj
 
+out/
+
 .DS_Store
 *.DotSettings
 

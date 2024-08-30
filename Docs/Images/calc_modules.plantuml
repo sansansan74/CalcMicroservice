@@ -1,0 +1,49 @@
+@startuml
+
+    actor Client
+
+    node InfrastuctureModule{
+        component Parser
+        component Calc
+    }
+
+    node LogModule {
+        component LogWriter
+    }
+
+    node OperationsModule {
+        component OperAdd
+        component OperMinus
+        component OperMult
+        component OperDiv
+    }
+
+    node FunctionsModule {
+        component OperAvg
+        component OperAbs
+        component OperPi
+    }
+
+    component RabbitMQ
+    database Redis
+    database MongoDb
+
+    Client .left.> RabbitMQ
+    Parser --> RabbitMQ
+    OperAdd -up-> RabbitMQ
+    OperMinus -up-> RabbitMQ
+    OperMult -up-> RabbitMQ
+    OperDiv -up-> RabbitMQ
+    OperAvg --> RabbitMQ
+    OperAbs --> RabbitMQ
+    OperPi --> RabbitMQ
+    LogWriter --> RabbitMQ
+    LogWriter -up-> MongoDb: Write\nlogs to Db
+
+    Calc --> RabbitMQ
+    Calc -up-> Redis: Cache\noperation\nresults
+    
+
+
+
+@endum
